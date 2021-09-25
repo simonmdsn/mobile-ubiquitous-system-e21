@@ -55,7 +55,7 @@ def show_median():
 
 
 def show_mean():
-    degree = 3
+    degree = 10
     mean_gt_lat = ndimage.uniform_filter(gt_lat, size=degree).tolist()
     mean_gt_long = ndimage.uniform_filter(gt_long, size=degree).tolist()
     mean_phone_lat = ndimage.uniform_filter(phone_lat, size=degree).tolist()
