@@ -72,6 +72,27 @@ def show_mean():
     plt.title('Running.csv mean filter')
     plt.show()
 
-show_raw()
-show_median()
-show_mean()
+def show_gt_mean_median_raw():
+    degree = 10
+    mean_phone_lat = ndimage.uniform_filter(phone_lat, size=degree).tolist()
+    mean_phone_long = ndimage.uniform_filter(phone_long, size=degree).tolist()
+    med_phone_long = ndimage.median_filter(phone_long, size=degree).tolist()
+    med_phone_lat = ndimage.median_filter(phone_lat, size=degree).tolist()
+
+    plt.scatter(med_phone_long, med_phone_lat, c=[
+                '#12345688']*size, label='med_phone')
+    plt.scatter(mean_phone_long, mean_phone_lat,
+                c=['#8c564b88']*size, label='mean_phone')
+    plt.scatter(phone_long, phone_lat,
+                c=['#00000088']*size, label='raw_phone')
+
+    plt.xlabel('long')
+    plt.ylabel('lat')
+    plt.legend()
+    plt.title('Running.csv raw, median, and mean')
+    plt.show()
+
+#show_raw()
+#show_median()
+#show_mean()
+show_gt_mean_median_raw()
