@@ -1,0 +1,15 @@
+Develop an architectural prototype for the application of a performance tactic.
+
+STEP 1 Select a tactic, e.g, you could find a performance
+tactic that consider the QAS you already wrote earlier this lecture
+
+
+STEP 2 Code the prototype, e.g. create some dummy data,
+implement some handling of the data following the tactic and create an output.
+
+STEP 3 Study the result to evaluate if the prototype indicate that the tactic can help satisfy
+the QAS (e.g. benchmark compared to a trivial implementation before applying the tactic).
+
+Hand-in your results (e.g. graph or numbers) including type of AP developed and conclusions
+ (e.g. does the tactic enable you to satisfy the QAS?, how large is the improvement when applying the tactic?
+
